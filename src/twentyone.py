@@ -15,7 +15,7 @@ class ShuffledDeck:
         shuffle(self.cards)
 
     def deal_card(self):
-        return self.cards.pop(random.choice(self.cards))
+        return self.cards.pop()
 
 
 class TwentyOneGame:
@@ -24,7 +24,7 @@ class TwentyOneGame:
         self.current_hand = []
 
         # deal two cards
-        for i in range(1, 2):
+        for i in range(0, 2):
             self.current_hand.append(self.deck.deal_card())
 
     # gets closest score to 21
